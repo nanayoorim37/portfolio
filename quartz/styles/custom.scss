@@ -1,3 +1,34 @@
 @use "./variables.scss" as *;
+@use "./themes";
 
-// put your custom CSS here!
+// Image Grid (adapted from Obsidian Minimal theme by @kepano, MIT License)
+:root {
+  --image-grid-fit: cover;
+  --image-grid-background: transparent;
+  --img-grid-gap: 0.5rem;
+}
+
+@media (max-width: 400px) {
+  :root {
+    --img-grid-gap: 0.25rem;
+  }
+}
+
+p:has(> img ~ img) {
+  display: grid;
+  margin-block-start: var(--img-grid-gap);
+  margin-block-end: var(--img-grid-gap);
+  gap: var(--img-grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+
+  > img {
+    object-fit: var(--image-grid-fit);
+    background-color: var(--image-grid-background);
+    width: 100%;
+    height: 100%;
+  }
+
+  > br {
+    display: none;
+  }
+}

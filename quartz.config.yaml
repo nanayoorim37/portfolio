@@ -16,8 +16,8 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: Pretendard Variable
-      body: Pretendard Variable
+      header: Noto Sans KR
+      body: Noto Sans KR
       code: IBM Plex Mono
     colors:
       lightMode:

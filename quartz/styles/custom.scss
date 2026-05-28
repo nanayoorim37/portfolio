@@ -2,17 +2,43 @@
 @use "./themes";
 
 @font-face {
-  font-family: "Pretendard Variable";
-  font-weight: 45 920;
+  font-family: "Freesentation";
+  src: url("https://cdn.jsdelivr.net/gh/vlogcloud/freesentationFont@main/font/Freesentation-4Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/woff2/PretendardVariable.woff2")
-    format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Freesentation";
+  src: url("https://cdn.jsdelivr.net/gh/vlogcloud/freesentationFont@main/font/Freesentation-6SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Freesentation";
+  src: url("https://cdn.jsdelivr.net/gh/vlogcloud/freesentationFont@main/font/Freesentation-7Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
-  --headerFont: "Pretendard Variable", "Noto Sans KR", system-ui, sans-serif;
-  --bodyFont: "Pretendard Variable", "Noto Sans KR", system-ui, sans-serif;
+  --headerFont: "Freesentation", "Noto Sans KR", system-ui, sans-serif;
+  --bodyFont: "Freesentation", "Noto Sans KR", system-ui, sans-serif;
+}
+
+// Fix Tokyo Night hardcoded light-mode text colors bleeding into dark mode
+body[data-slug] .page > div#quartz-body,
+.page > div#quartz-body div.center,
+.page > div#quartz-body footer,
+.page > div#quartz-body div.sidebar,
+body[data-slug] div#quartz-root.page,
+.page > div#quartz-body div.sidebar.left,
+.page > div#quartz-body div.sidebar.right {
+  color: var(--text-normal);
 }
 
 // Image Grid (adapted from Obsidian Minimal theme by @kepano, MIT License)

@@ -1,7 +1,14 @@
 @use "./variables.scss" as *;
 @use "./themes";
 
-@import url("https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css");
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/woff2/PretendardVariable.woff2")
+    format("woff2-variations");
+}
 
 // Image Grid (adapted from Obsidian Minimal theme by @kepano, MIT License)
 :root {

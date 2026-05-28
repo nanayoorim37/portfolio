@@ -1,6 +1,8 @@
 @use "./variables.scss" as *;
 @use "./themes";
 
+@import url("https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
 // Image Grid (adapted from Obsidian Minimal theme by @kepano, MIT License)
 :root {
   --image-grid-fit: cover;
